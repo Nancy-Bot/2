@@ -65,8 +65,7 @@ async def play(client, m: Message):
             songname = "Voice Note"
          if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            await huehue.edit(f"🔢 Added to queue at position\nMade With Love💖 By @Magical_Univers  » **{pos}**")
-         else:
+            await huehue.edit(f"🔢 Added to queue at position » **{pos}**\nMade With Love💖 By @Magical_Univers")         else:
             await call_py.join_group_call(
                chat_id,
                AudioPiped(
@@ -75,7 +74,7 @@ async def play(client, m: Message):
                stream_type=StreamType().pulse_stream,
             )
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            await huehue.edit(f"**Started Playing Audio ▶** \n**🏷️ Title** : [{songname}]({link}) \n**💭 Chat ID** : `{chat_id}`",\nMade With Love💖 By @Magical_Univers, disable_web_page_preview=True)
+            await huehue.edit(f"**Started Playing Audio ▶** \n**🏷️ Title** : [{songname}]({link}) \n**💭 Chat ID** : `{chat_id}`", disable_web_page_preview=True)
       else:
          if len(m.command) < 2:
             await m.reply("💡 Reply to an Audio File or give something to Search")
@@ -94,8 +93,7 @@ async def play(client, m: Message):
                else:
                   if chat_id in QUEUE:
                      pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                     await huehue.edit(f"🔢 Added to queue at position\nMade With Love💖 By @Magical_Univers » **{pos}**")
-                  else:
+                     await huehue.edit(f"🔢 Added to queue at position » **{pos}**\nMade With Love💖 By @Magical_Univers")                  else:
                      try:
                         await call_py.join_group_call(
                            chat_id,
@@ -105,7 +103,7 @@ async def play(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                        await huehue.edit(f"**Started Playing Audio ▶** \n**🏷️ Title** : [{songname}]({url}) \n**💭 Chat ID** : `{chat_id}`"\nMade With Love💖 By @Magical_Univers, disable_web_page_preview=True)
+                        await huehue.edit(f"**Started Playing Audio ▶** \n**🏷️ Title** : [{songname}]({url}) \n**💭 Chat ID** : `{chat_id}`", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
             
@@ -127,7 +125,7 @@ async def play(client, m: Message):
                else:
                   if chat_id in QUEUE:
                      pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                     await huehue.edit(f"🔢 Added to queue at position\nMade With Love💖 By @Magical_Univers » **{pos}**")
+                     await huehue.edit(f"🔢 Added to queue at position » **{pos}**\nMade With Love💖 By @Magical_Univers")
                   else:
                      try:
                         await call_py.join_group_call(
@@ -138,7 +136,7 @@ async def play(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                        await huehue.edit(f"**Started Playing Audio ▶** \n**🏷️ Title** : [{songname}]({url}) \n**💭 Chat ID** : `{chat_id}`"\nMade With Love💖 By @Magical_Univers, disable_web_page_preview=True)
+                        await huehue.edit(f"**Started Playing Audio ▶** \n**🏷️ Title** : [{songname}]({url}) \n**💭 Chat ID** : `{chat_id}`", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.reply(f"`{ep}`")
 
