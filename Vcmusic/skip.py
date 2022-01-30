@@ -11,9 +11,9 @@ async def skip(client, m: Message):
    if len(m.command) < 2:
       op = await skip_current_song(chat_id)
       if op==0:
-         await m.reply("❌ **Nothing Is Playing**")
+         await m.reply("❌ **Nothing Is Playing**\nMade With Love💖 By @Magical_Univers")
       elif op==1:
-         await m.reply("❌ The queue is Empty, leaving Voice Chat now...")
+         await m.reply("❌ The queue is Empty, leaving Voice Chat now...\nMade With Love💖 By @Magical_Univers")
       else:
          await m.reply(f"**Skipped ⏭** \n**🎧 Now Playing** - [{op[0]}]({op[1]}) | `{op[2]}`", disable_web_page_preview=True)
    else:
@@ -40,11 +40,11 @@ async def stop(client, m: Message):
       try:
          await call_py.leave_group_call(chat_id)
          clear_queue(chat_id)
-         await m.reply("**✅ Streaming ended**")
+         await m.reply("**✅ Streaming ended**\nMade With Love💖 By @Magical_Univers")
       except Exception as e:
          await m.reply(f"**ERROR** \n`{e}`")
    else:
-      await m.reply("❌ **Nothing is Streaming**")
+      await m.reply("❌ **Nothing is Streaming**\nMade With Love💖 By @Magical_Univers")
    
 @Client.on_message(contact_filter & filters.command(['pause'], prefixes=f"{HNDLR}"))
 async def pause(client, m: Message):
@@ -52,11 +52,11 @@ async def pause(client, m: Message):
    if chat_id in QUEUE:
       try:
          await call_py.pause_stream(chat_id)
-         await m.reply("**Paused Streaming ⏸️**")
+         await m.reply("**Paused Streaming ⏸️**\nMade With Love💖 By @Magical_Univers")
       except Exception as e:
          await m.reply(f"**ERROR** \n`{e}`")
    else:
-      await m.reply("❌ **Nothing is Streaming**")
+      await m.reply("❌ **Nothing is Streaming**\nMade With Love💖 By @Magical_Univers")
       
 @Client.on_message(contact_filter & filters.command(['resume'], prefixes=f"{HNDLR}"))
 async def resume(client, m: Message):
@@ -64,8 +64,8 @@ async def resume(client, m: Message):
    if chat_id in QUEUE:
       try:
          await call_py.resume_stream(chat_id)
-         await m.reply("**Resumed Streaming ▶**")
+         await m.reply("**Resumed Streaming ▶**\nMade With Love💖 By @Magical_Univers")
       except Exception as e:
          await m.reply(f"**ERROR** \n`{e}`")
    else:
-      await m.reply("❌ **Nothing is Streaming**")
+      await m.reply("❌ **Nothing is Streaming**\nMade With Love💖 By @Magical_Univers")
