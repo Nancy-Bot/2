@@ -21,4 +21,4 @@ async def playlist(client, m: Message):
             QUE = QUE + "\n" + f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`"
          await m.reply(QUE, disable_web_page_preview=True)
    else:
-      await m.reply("❌ **Nothing is Streaming**")
+      await m.reply("❌ **Nothing is Streaming**\nMade With Love💖 By @Magical_Univers")
