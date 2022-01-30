@@ -65,7 +65,7 @@ async def play(client, m: Message):
             songname = "Voice Note"
          if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            await huehue.edit(f"🔢 Added to queue at position » **{pos}**\nMade With Love💖 By @Magical_Univers")         else:
+            await huehue.edit(f"👋🏻 @Magical_Univers💖🔢 Added song to queue at position » **{pos}**")
             await call_py.join_group_call(
                chat_id,
                AudioPiped(
@@ -93,7 +93,7 @@ async def play(client, m: Message):
                else:
                   if chat_id in QUEUE:
                      pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                     await huehue.edit(f"🔢 Added to queue at position » **{pos}**\nMade With Love💖 By @Magical_Univers")                  else:
+                     await huehue.edit(f"👋🏻 @Magical_Univers💖🔢 Added song to queue at position » **{pos}**")
                      try:
                         await call_py.join_group_call(
                            chat_id,
@@ -125,7 +125,7 @@ async def play(client, m: Message):
                else:
                   if chat_id in QUEUE:
                      pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                     await huehue.edit(f"🔢 Added to queue at position » **{pos}**\nMade With Love💖 By @Magical_Univers")
+                     await huehue.edit(f"👋🏻 @Magical_Univers💖🔢 Added song to queue at position » **{pos}**")
                   else:
                      try:
                         await call_py.join_group_call(
